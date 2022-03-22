@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dbmsproject">
+    package="com.example.student">
    <application
         android:label="dbmsproject"
         android:name="${applicationName}"
