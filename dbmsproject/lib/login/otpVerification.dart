@@ -66,7 +66,7 @@ class _OtpVerificationState extends State<OtpVerification> {
             children: [
               Spacer(),
               Image.asset(
-                'assets/logo.jpg',
+                'assets/logo.png',
                 height: MediaQuery.of(context).size.height * 0.15,
               ),
               SizedBox(
@@ -137,12 +137,12 @@ class _OtpVerificationState extends State<OtpVerification> {
                           ),
                           timer != 0
                               ? TextSpan(
-                            text: " in $timer seconds",
-                            style: const TextStyle(
-                              // fontFamily: kFont1,
-                              color: Colors.black,
-                            ),
-                          )
+                                  text: " in $timer seconds",
+                                  style: const TextStyle(
+                                    // fontFamily: kFont1,
+                                    color: Colors.black,
+                                  ),
+                                )
                               : TextSpan(),
                         ],
                       ),
@@ -156,21 +156,27 @@ class _OtpVerificationState extends State<OtpVerification> {
               TextButton(
                 style: TextButton.styleFrom(
                   primary: Colors.white,
-                  minimumSize: Size(MediaQuery.of(context).size.width * 0.7, MediaQuery.of(context).size.height * 0.06),
+                  minimumSize: Size(MediaQuery.of(context).size.width * 0.7,
+                      MediaQuery.of(context).size.height * 0.06),
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(12.0)),
                   ),
                   backgroundColor: Color(0Xff02617d),
                 ),
-                child: const Text('Verify OTP',
+                child: const Text(
+                  'Verify OTP',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18,
-                  ),),
+                  ),
+                ),
                 onPressed: () async {
-                  final PhoneAuthCredential credential = PhoneAuthProvider.credential(
-                    verificationId: verificationId, smsCode: otpString,);
+                  final PhoneAuthCredential credential =
+                      PhoneAuthProvider.credential(
+                    verificationId: verificationId,
+                    smsCode: otpString,
+                  );
 
                   await OTPService().signInWithCred(credential, context);
                 },
@@ -230,7 +236,9 @@ class _OtpVerificationState extends State<OtpVerification> {
             loading = true;
           });
           final PhoneAuthCredential credential = PhoneAuthProvider.credential(
-            verificationId: verificationID, smsCode: otpString,);
+            verificationId: verificationID,
+            smsCode: otpString,
+          );
 
           await OTPService().signInWithCred(credential, context);
         },

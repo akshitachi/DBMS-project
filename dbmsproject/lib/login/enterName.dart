@@ -47,7 +47,9 @@ class _EnterNameState extends State<EnterName> {
                     controller: textEditingController,
                     decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0Xff02617d),),
+                        borderSide: BorderSide(
+                          color: Color(0Xff02617d),
+                        ),
                       ),
                     ),
                     style: TextStyle(
@@ -64,18 +66,21 @@ class _EnterNameState extends State<EnterName> {
               TextButton(
                 style: TextButton.styleFrom(
                   primary: Colors.white,
-                  minimumSize: Size(MediaQuery.of(context).size.width * 0.7, MediaQuery.of(context).size.height * 0.06),
+                  minimumSize: Size(MediaQuery.of(context).size.width * 0.7,
+                      MediaQuery.of(context).size.height * 0.06),
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(12.0)),
                   ),
                   backgroundColor: Color(0Xff02617d),
                 ),
-                child: const Text('Continue',
+                child: const Text(
+                  'Continue',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18,
-                  ),),
+                  ),
+                ),
                 onPressed: () async {
                   var isValid = _formKey.currentState!.validate();
                   if (isValid) {

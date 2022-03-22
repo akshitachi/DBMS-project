@@ -33,15 +33,15 @@ class LoginPageState extends State<LoginPage> {
         child: Column(
           children: [
             Spacer(),
-            // Image.asset(
-            //   'assets/logo.jpg',
-            //   height: MediaQuery.of(context).size.height * 0.15,
-            // ),
+            Image.asset(
+              'assets/logo.png',
+              height: MediaQuery.of(context).size.height * 0.15,
+            ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
             Text(
-              'Sales',
+              'Student Data',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 44,
@@ -120,7 +120,7 @@ class LoginPageState extends State<LoginPage> {
               child: Text(
                 isLogin ? 'Continue' : 'Get Started',
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                   fontSize: 18,
                 ),
               ),
@@ -159,7 +159,6 @@ class LoginPageState extends State<LoginPage> {
               },
             ),
             Spacer(),
-
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
