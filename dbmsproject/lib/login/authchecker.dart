@@ -1,5 +1,5 @@
 // ignore_for_file: prefer_const_constructors, curly_braces_in_flow_control_structures
-import 'package:dbmsproject/login/enterName.dart';
+import 'package:dbmsproject/login/registration/enterName.dart';
 import 'package:dbmsproject/login/login.dart';
 import 'package:dbmsproject/providers/authProvider.dart';
 import 'package:flutter/material.dart';

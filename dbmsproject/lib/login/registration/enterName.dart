@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:dbmsproject/custom_page_route.dart';
+import 'package:dbmsproject/login/registration/registration_page.dart';
 import 'package:flutter/material.dart';
 
 class EnterName extends StatefulWidget {
@@ -88,6 +90,13 @@ class _EnterNameState extends State<EnterName> {
                       pressAttention = !pressAttention;
                     });
                   }
+                   Navigator.of(context).pushReplacement(
+                      CustomPageRoute(
+                        child: RegistrationScreen(
+                          name: textEditingController.text,
+                        ),
+                      ),
+                    );
                 },
               ),
             ],

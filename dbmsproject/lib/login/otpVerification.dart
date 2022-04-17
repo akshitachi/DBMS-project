@@ -73,7 +73,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                 height: MediaQuery.of(context).size.height * 0.01,
               ),
               const Text(
-                'Sales',
+                'Student Data',
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 35,

@@ -1,3 +1,4 @@
+import 'package:dbmsproject/login/registration/enterName.dart';
 import 'package:dbmsproject/providers/sharedPrefs.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +7,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'dbpath.dart';
 import 'login/authchecker.dart';
-
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

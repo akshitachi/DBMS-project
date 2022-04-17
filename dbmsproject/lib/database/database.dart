@@ -19,4 +19,21 @@ class DataBaseService {
       return false;
     }
   }
+
+  Future<bool> getUserExistence(String username) async {
+    var result = await database
+        .child('Users')
+        .orderByChild('username')
+        .equalTo(username)
+        .get()
+        .then((data) => data.value);
+
+    if (result != null) {
+      print('lol');
+      return true;
+    } else {
+      print('hh');
+      return false;
+    }
+  }
 }
