@@ -199,7 +199,7 @@ class _EnterBioScreenState extends State<EnterBioScreen> {
                             fontStyle: FontStyle.italic,
                             fontSize: 17),
                         enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Color(0xffFFCA0D)),
+                          borderSide: BorderSide(color: Color(0Xff02617d)),
                         ),
                       ),
                       style: TextStyle(
@@ -224,12 +224,12 @@ class _EnterBioScreenState extends State<EnterBioScreen> {
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12.0)),
                     ),
-                    backgroundColor: Colors.amber,
+                    backgroundColor: Color(0Xff02617d),
                   ),
                   child: Text(
                     'Continue',
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 18,
                     ),
                   ),
@@ -267,7 +267,6 @@ class _EnterBioScreenState extends State<EnterBioScreen> {
                         'uid': user.uid,
                         'image_url': url,
                       };
-                      print(map);
                       await database
                           .child('Users')
                           .child(user.uid)

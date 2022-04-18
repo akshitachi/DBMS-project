@@ -38,7 +38,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 height: MediaQuery.of(context).size.height * 0.15,
               ),
               Text(
-                'Please enter your preferred username',
+                'Please enter your Registration number',
                 style: TextStyle(fontSize: 18),
               ),
               SizedBox(
@@ -50,13 +50,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     vertical: MediaQuery.of(context).size.height * 0.04),
                 child: Row(
                   children: [
-                    Text(
-                      '@',
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.03,
                     ),
@@ -67,12 +60,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         child: TextFormField(
                           validator: (value) {
                             if (value!.isEmpty) {
-                              return 'Please enter a username';
+                              return 'Please enter you registration number';
                             }
                           },
                           inputFormatters: [
-                            FilteringTextInputFormatter.allow(RegExp("[a-z]")),
-                            LengthLimitingTextInputFormatter(180),
+                            LengthLimitingTextInputFormatter(15),
                           ],
                           controller: textEditingController,
                           decoration: InputDecoration(
@@ -105,7 +97,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 30.0),
                 child: Text(
-                  'This username is how people can search you!!!',
+                  'This registration no. is how people can search you!!!',
                   textAlign: TextAlign.start,
                   style: TextStyle(
                     fontSize: 16,
